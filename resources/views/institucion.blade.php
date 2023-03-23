@@ -75,7 +75,7 @@
                         <a class="nav-link lead" href="/plancurso" style="font-size:25px;">Contenido</a>
                     </li>
                     <li class="nav-item">
-                        <a type="button" class="nav-link lead" href="{{ route('iniciar') }}"
+                        <a type="button" class="nav-link lead" href="{{ route('login') }}"
                             style="font-size:25px;">Prueba Diagnóstica</a>
                     </li>
 
