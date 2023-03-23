@@ -1,0 +1,314 @@
+
+/*----------INDEX----------*/
+
+*{
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+#Titulo_Index{
+    font-family: 'Secular One', sans-serif;
+    -webkit-text-stroke: 2px #137100;
+    font-size:50px;
+}
+
+#Header_Index{
+    background-image: linear-gradient(to right, #82DA70, #49CE2E);
+    /*background-color: #57C640;*/
+    border-top:4px solid #4BAE37;
+    border-bottom:4px solid #4BAE37;
+}
+
+#banner1{
+    background-image: url(../img/imgBanner.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:1400px;
+    justify-content: center;
+    align-items:center;
+}
+
+#banner4{
+    background-image: url(../img/imgBanner5.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:900px;
+    justify-content: center;
+    align-items:center;
+}
+
+#contenido{
+    background-color:#E7E7E7;
+    justify-content: center;
+    flex-wrap:wrap;
+    /*align-items:center;*/
+}
+
+a:link{
+    text-decoration:none;
+}
+
+#jumbotron1, #jumbotron2, #jumbotron3{
+    border:2px solid #C0C0C0; 
+    border-radius: 10px;
+}
+
+#imgIndex1, #imgIndex2{
+    /*IMAGENES RESPONSIVE*/
+    max-width:100%;
+    height: auto;
+    border: 3px solid #C0C0C0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#btnIndex1, #btnIndex2{
+    background-color:#4BAE37;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    padding-top:8px;
+    padding-bottom:8px;
+    border:1px solid white;
+    border-radius:10px;
+    
+}
+
+/*----------INFORMACIÓN----------*/
+
+#banner2{
+    background-image: url(../img/imgBanner2.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:1000px;
+    justify-content: center;
+    align-items:center;
+}
+
+#contenidoInfo{
+    flex-direction:column;
+    background-color:#E7E7E7;
+    /*justify-content: center;*/
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+#imgInfo1{
+    max-width:100%;
+    height: auto;
+}
+
+#imgInfo2, #imgInfo3, #imgInfo4, #mapaInfo{
+    max-width:100%;
+    height: auto;
+    border: 3px solid #C0C0C0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*----------MAPA RESPONSIVE----------*/
+.map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
+
+/*----------PLAN CURSO----------*/
+
+#banner3{
+    background-image: url(../img/imgBanner4.jpeg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:1000px;
+    justify-content: center;
+    align-items:center;
+}
+
+#imgPA1, #imgPA2, #imgPB1, #imgPB2, #imgPC1, #imgPC2, #imgABC, #imgAcentos1, #imgExpCot1, #imgFrasesUtiles, #imgDespedidas, #imgPCF1, #imgPCF2, #imgPCF3, #imgPCF4, #imgPCF5{
+    max-width:100%;
+    height: auto;
+    border: 3px solid #C0C0C0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#btnPlanCurso1, #btnPlanCurso2{
+    background-color:#4BAE37;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    padding-top:8px;
+    padding-bottom:8px;
+    border:1px solid white;
+    border-radius:10px;
+    
+}
+
+#jumbotronPlanCurso1, #jumbotronPlanCurso2, #jumbotronPlanCurso3, #jumbotronPlanCurso4, #jumbotronPlanCurso5, #jumbotronPlanCurso6{
+    border:2px solid #C0C0C0; 
+    border-radius: 10px;
+}
+
+
+#imgTemarios{
+    max-width:100%;
+    height: auto;
+}
+
+/*----------TEMARIO A2----------*/
+
+#imgNumeros, #imgPreposiciones, #imgPronombres, #imgConectores1, #imgColores, #imgAnimales, #imgCuerpo, #imgFrutas{
+    max-width:100%;
+    height: auto;
+    border: 3px solid #C0C0C0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*----------TEMARIO B1----------*/
+
+#imgDias, #imgMeses, #imgSer, #imgAdjetivos, #imgPresente, #imgF1, #imgF2, #imgP1, #imgP2, #imgPCF6, #imgPCF7{
+    max-width:100%;
+    height: auto;
+    border: 3px solid #C0C0C0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*----------TEMARIO B2----------*/
+
+#imgTiempo1, #imgTiempo2, #imgTiempo3, #imgTiempo4, #imgOrdinales1, #imgOrdinales2, #imgOrdinales3, #imgOrdinales4, #imgVoc, #imgFamilia, #imgPCF8, #imgPCF9{
+    max-width:100%;
+    height: auto;
+    border: 3px solid #C0C0C0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*----------TEMARIO C1----------*/
+
+#imgRopa, #imgObjetos, #imgAlimentos1, #imgAlimentos2, #imgAlimentos3, #imgAlimentos4, #imgProfesiones, #imgPCF10, #imgPCF11{
+    max-width:100%;
+    height: auto;
+    border: 3px solid #C0C0C0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*----------TEMARIO C2----------*/
+
+#imgZodiaco, #imgModismos, #imgVocApoyo, #imgPCF12{
+    max-width:100%;
+    height: auto;
+    border: 3px solid #C0C0C0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*----------INGRESAR----------*/
+
+#banner4{
+    background-image: url(../img/imgBanner5.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:900px;
+    justify-content: center;
+    align-items:center;
+}
+
+#contenidoLec{
+    flex-direction:column;
+    background-color:#E7E7E7;
+    /*justify-content: center;*/
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+
+/*----------PRELOAD----------*/
+
+#preload{
+    position:fixed;
+    z-index:2000;
+    width:100%;
+    height:100%;
+  /*  background: rgba(50, 72, 172, 0.7); */
+    background: white;
+}
+
+#porcentajeCarga{
+    position:absolute;
+    text-align:center;
+    width:100%;
+    color: green;
+    top:55%;
+    font-size:20px;
+    font-weight: 100;
+}
+
+#lineaCarga{
+    position:absolute;
+    width:100%;
+    height:2px;
+    top:50%;
+    left:0%;
+    background: white;
+}
+
+#rellenoCarga{
+    position:absolute;
+    top:0;
+    left:0;
+    height:2px;
+    width:0%;
+    background:green;
+}
+
+#estadoCarga{
+    position:absolute;
+    background: url(../img/imagenCarga2.gif);
+    top:50%;
+    left:50%;
+    transform:translate(-67%, -110%);
+    width:600px;
+    height:400px;
+}
+
+#scrollUp{
+    bottom: 40px;
+    right: 20px; 
+    width: 80px;
+    height: 80px;
+    background: url(../img/flecha_arriba.png);
+    background-size:cover;
+    background-position:center;
+    
+}

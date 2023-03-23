@@ -1,0 +1,42 @@
+.titlewelcome {
+    font-size: 35px !important;
+    color: #2ecc71 !important;
+    font-family: "Monda", sans-serif;
+}
+
+.titletest {
+    font-size: 35px !important;
+    color: #d99a1b !important;
+    font-family: "Tiro Devanagari Hindi", serif;
+}
+
+
+@media only screen and (max-width: 1030px) {
+    .barrnav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .contenidodash {
+        margin-top: 5% !important;
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    .contenidodash {
+        margin-top: 10% !important;
+    }
+}
+
+@media only screen and (max-width: 455px) {
+    .contenidodash {
+        margin-top: 15% !important;
+    }
+}
+
+@media only screen and (max-width: 407px) {
+    .contenidodash {
+        margin-top: 35% !important;
+    }
+}
