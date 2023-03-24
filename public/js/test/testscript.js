@@ -55,7 +55,10 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const bodycard = document.querySelector(".cardbody");
-
+const useraprobed = "Aprobado";
+const userreprobed = "Reprobado";
+const resultuser = "";
+const resultUserCicle = "";
 // if startQuiz button clicked
 start_btn.onclick = () => {
     info_box.classList.add("activeInfo"); //show info box
@@ -115,6 +118,8 @@ restart_quiz.onclick = () => {
 
 // if quitQuiz button clicked
 quit_quiz.onclick = () => {
+    alert(resultuser);
+
     window.location.reload(); //reload the current window
 };
 
@@ -227,30 +232,29 @@ function showResult() {
         // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag =
+            "<span><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Estado: <b>" +
+            useraprobed +
+            "</b></i></span>" +
             "<span>Felicitaciones! 🎉, Conseguiste <p>" +
             userScore +
             "</p> de <p>" +
             questions.length +
             "</p></span>";
         scoreText.innerHTML = scoreTag; //adding new span tag inside score_Text
-    } else if (userScore > 1) {
-        // if user scored more than 1
-        let scoreTag =
-            "<span>Qué bien!! 😎, Conseguiste <p>" +
-            userScore +
-            "</p> de <p>" +
-            questions.length +
-            "</p></span>";
-        scoreText.innerHTML = scoreTag;
+        resultUserCicle.concat(useraprobed); // The user aprobed de course
     } else {
-        // if user scored less than 1
+        // if user scored less or same than 3
         let scoreTag =
+            "<span><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Estado: <b>" +
+            userreprobed +
+            "</b></i></span>" +
             "<span>Lo siento... 😐, Solo conseguiste <p>" +
             userScore +
             "</p> de <p>" +
             questions.length +
             "</p></span>";
         scoreText.innerHTML = scoreTag;
+        resultUserCicle.concat(userreprobed); // The user Reprobed de course
     }
 }
 

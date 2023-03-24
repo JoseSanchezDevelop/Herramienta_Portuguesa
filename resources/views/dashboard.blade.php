@@ -532,7 +532,12 @@
                                 </div>
                                 <div class="complete_text">Has finalizado tu exámen!</div>
                                 <div class="score_text">
-                                    <!-- Here I've inserted Score Result from JavaScript -->
+                                    <!-- Here I've inserted Score Result from JavaScript 
+                                    <script>
+                                        var str=”Mi texto”;
+                                        document.getElementById('txt').innerHTML=str;
+                                        </script>-->
+
                                 </div>
                                 <div class="buttons">
                                     <button class="restart">Repetir</button>
