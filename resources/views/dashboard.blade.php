@@ -52,6 +52,9 @@
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 
+            <!-- FontAweome CDN Link for Icons-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
             <!--Scrollup Desactivado <script src="js/plugins/scrollUP.js"></script>-->
 
 
@@ -437,17 +440,21 @@
                 <div class="card-header text-uppercase fw-bold">
                     <h1 class="titletest"> | prova de portugues | </h1>
                 </div>
-                <div class="card-body">
+                <div class="card-body cardbody">
                     <h5 class="card-title" id="msg1">Este é um teste para avaliar o seu nível de português.</h5>
                     <p class="card-text" id="msg2">Con el soporte del framework de <u>Laravel 8</u>.</p>
                     <br id="msg3">
-                    <a class="btn btn-outline-warning text-black" id="StartTest" onclick="ocultar1();" abbr
+                    <a class="btn btn-outline-warning text-black" id="btnstartteste" onclick="ocultar1();" abbr
                         title="Selecciona para iniciar la prueba.">INICIAR TESTE</abbr></a>
                     <br>
 
                     <!--Con esta instrucción arrancará con todo el div, sin verse-->
                     <style>
                         #ShowAction {
+                            display: none;
+                        }
+
+                        #btncerrarteste {
                             display: none;
                         }
                     </style>
@@ -464,33 +471,86 @@
 
                         <br>
                         <br>
-                        <br>
 
-                        <section>
-                           <p>asdasdasd</p>
-                        <select class="form-select" aria-label="Default select example" id="cuest"
-                            style="margin-bottom: 5%; width:45%; position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </section>
+                        <section id="cuest">
 
+                            <!-- start Quiz button -->
+                            <div class="start_btn"><button>Iniciar Exámen</button></div>
 
-                        <a class="btn btn-secondary" id="CancelarTeste" onclick="CerrarTest()">Cancelar Teste</a>
+                            <!-- Info Box -->
+                            <div class="info_box">
+                                <div class="info-title"><span>Reglas de tu Exámen de Portugués</span></div>
+                                <div class="info-list">
+                                    <div class="info">1. Solo tendrás <span>15 segundos</span> para responder cada pregunta.
+                                    </div>
+                                    <div class="info">2. Una vez que seleccionas tu respuesta, no se puede deshacer.</div>
+                                    <div class="info">3. No puedes seleccionar ninguna opción una vez que se acaba el tiempo.
+                                    </div>
+                                    <div class="info">4. No puedes salir del Quiz mientras está corriendo el tiempo.</div>
+                                    <div class="info">5. Obtendrás puntos con base en tus respuestas correctas.</div>
+                                </div>
+                                <div class="buttons">
+                                    <button class="quit">Salir</button>
+                                    <button class="restart">Continuar</button>
+                                </div>
+                            </div>
+
+                            <!-- Quiz Box -->
+                            <div class="quiz_box">
+                                <header>
+                                    <div class="title">Exámen Portugués</div>
+                                    <div class="timer">
+                                        <div class="time_left_txt">Tiempo Restante</div>
+                                        <div class="timer_sec">15</div>
+                                    </div>
+                                    <div class="time_line"></div>
+                                </header>
+                                <section>
+                                    <div class="que_text">
+                                        <!-- Here I've inserted question from JavaScript -->
+                                    </div>
+                                    <div class="option_list">
+                                        <!-- Here I've inserted options from JavaScript -->
+                                    </div>
+                                </section>
+
+                                <!-- footer of Quiz Box -->
+                                <footer>
+                                    <div class="total_que">
+                                        <!-- Here I've inserted Question Count Number from JavaScript -->
+                                    </div>
+                                    <button class="next_btn">Siguiente Pregunta</button>
+                                </footer>
+                            </div>
+
+                            <!-- Result Box -->
+                            <div class="result_box">
+                                <div class="icon">
+                                    <i class=""><img
+                                            src="https://assets.website-files.com/5c6332cbd558b7db5b9817fc/60bfeb56162921608198e703_Logo-UTS-1-p-500.png"
+                                            alt="UTS.LO.HACEMOS.POSIBLE"></i>
+                                </div>
+                                <div class="complete_text">Has finalizado tu exámen!</div>
+                                <div class="score_text">
+                                    <!-- Here I've inserted Score Result from JavaScript -->
+                                </div>
+                                <div class="buttons">
+                                    <button class="restart">Repetir</button>
+                                    <button class="quit">Salir</button>
+                                </div>
+                            </div>
+
+                        </section>
 
                         <br>
                         <br>
                     </div>
 
-
                 </div>
                 <div class="card-footer text-muted">
                     {{ auth()->user()->created_at }}
+                    <button type="button" class="btn btn-link" id="btncerrarteste"
+                        style="font-family:'Times New Roman', Times, serif;!important" onclick="cerrarteste()">Cancelar Teste</button>
                 </div>
             </div>
 
@@ -569,8 +629,12 @@
             <!--JS PROPIO (!!!DEBE IR AQUÍ PARA QUE EL SCROLLUP FUNCIONE!!!)-->
             <script src="js/script.js"></script>
 
-            <!--JS (!!!DEBE IR AQUÍ PARA QUE EL TEST SE VEA!!!)-->
+
+            <!--JS (!!!DEBE IR AQUÍ PARA QUE EL TEST SE EJECTUE!!!)-->
             <script src="js/test/testscript.js"></script>
+
+            <!--JS (!!!DEBE IR AQUÍ PARA QUE EL TEST SE EJECTUE!!!)-->
+            <script src="js/test/questions.js"></script>
 
         </body>
 
