@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Auth; //Invocamos las librerias de Auth, para que
 
 Route::get('/', function () {
     return view('welcome');
+
+
 });
 
 
@@ -81,7 +83,9 @@ Route::get('/sesion', function () {
 
 
 Route::view('/welcome', 'welcome'); //X DEFECTO LARAVEL
+
 Route::view('/index', 'index')->name('inicio');
+
 Route::view('/institucion', 'institucion');
 Route::view('/plancurso', 'plancurso');
 Route::view('/temasA1', 'temasA1');
