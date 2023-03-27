@@ -436,11 +436,11 @@
             </div>
 
             <br>
-            <div class="card text-center">
+            <div style="overflow-x:auto;" class="card text-center">
                 <div class="card-header text-uppercase fw-bold">
                     <h1 class="titletest"> | prova de portugues | </h1>
                 </div>
-                <div class="card-body cardbody">
+                <div style="overflow-x:auto;" class="card-body cardbody">
                     <h5 class="card-title" id="msg1">Este é um teste para avaliar o seu nível de português.</h5>
                     <p class="card-text" id="msg2">Con el soporte del framework de <u>Laravel 8</u>.</p>
                     <br id="msg3">
@@ -459,98 +459,105 @@
                         }
                     </style>
                     <br>
-                    <div id="ShowAction">
 
-                        <h3 id="msg4">A continuación, procederás a realizar la prueba de conocimientos de Portugués ↓</h3>
-                        <p id="msg5"> → Si deseas cancelar la prueba, dale click en <u
-                                style="font-family:'Times New Roman', Times, serif">Cancelar
-                                Teste.</u><br>
-                            <button type="button" class="btn btn-link" id="msg6"
-                                onclick="cuestionario()">Continuar...</button>
-                        </p>
+                    
+                
+                        <div id="ShowAction">
 
-                        <br>
-                        <br>
+                            <h3 id="msg4">A continuación, procederás a realizar la prueba de conocimientos de Portugués ↓</h3>
+                            <p id="msg5"> → Si deseas cancelar la prueba, dale click en <u
+                                    style="font-family:'Times New Roman', Times, serif">Cancelar
+                                    Teste.</u><br>
+                                <button type="button" class="btn btn-link" id="msg6"
+                                    onclick="cuestionario()">Continuar...</button>
+                            </p>
 
-                        <section id="cuest">
+                            <br>
+                            <br>
 
-                            <!-- start Quiz button -->
-                            <div class="start_btn"><button>Iniciar Exámen</button></div>
+                            <section id="cuest">
 
-                            <!-- Info Box -->
-                            <div class="info_box">
-                                <div class="info-title"><span>Reglas de tu Exámen de Portugués</span></div>
-                                <div class="info-list">
-                                    <div class="info">1. Solo tendrás <span>15 segundos</span> para responder cada pregunta.
+                                <!-- start Quiz button -->
+                                <div class="start_btn"><button>Iniciar Exámen</button></div>
+
+                                <!-- Info Box -->
+
+                                <div class="info_box">
+                                    <div class="info-title"><span>Reglas de tu Exámen de Portugués</span></div>
+                                    <div class="info-list">
+                                        <div class="info">1. Solo tendrás <span>15 segundos</span> para responder cada pregunta.
+                                        </div>
+                                        <div class="info">2. Una vez que seleccionas tu respuesta, no se puede deshacer.</div>
+                                        <div class="info">3. No puedes seleccionar ninguna opción una vez que se acaba el tiempo.
+                                        </div>
+                                        <div class="info">4. No puedes salir del Quiz mientras está corriendo el tiempo.</div>
+                                        <div class="info">5. Obtendrás puntos con base en tus respuestas correctas.</div>
                                     </div>
-                                    <div class="info">2. Una vez que seleccionas tu respuesta, no se puede deshacer.</div>
-                                    <div class="info">3. No puedes seleccionar ninguna opción una vez que se acaba el tiempo.
+                                    <div class="buttons">
+                                        <button class="quit">Salir</button>
+                                        <button class="restart">Continuar</button>
                                     </div>
-                                    <div class="info">4. No puedes salir del Quiz mientras está corriendo el tiempo.</div>
-                                    <div class="info">5. Obtendrás puntos con base en tus respuestas correctas.</div>
                                 </div>
-                                <div class="buttons">
-                                    <button class="quit">Salir</button>
-                                    <button class="restart">Continuar</button>
+
+                                <!-- Quiz Box -->
+                                <div class="quiz_box">
+                                    <header>
+                                        <div class="title">Exámen Portugués</div>
+                                        <div class="timer">
+                                            <div class="time_left_txt">Tiempo Restante</div>
+                                            <div class="timer_sec">15</div>
+                                        </div>
+                                        <div class="time_line"></div>
+                                    </header>
+                                    <section>
+                                        <div class="que_text">
+                                            <!-- Here I've inserted question from JavaScript -->
+                                        </div>
+                                        <div class="option_list">
+                                            <!-- Here I've inserted options from JavaScript -->
+                                        </div>
+                                    </section>
+
+                                    <!-- footer of Quiz Box -->
+                                    <footer>
+                                        <div class="total_que">
+                                            <!-- Here I've inserted Question Count Number from JavaScript -->
+                                        </div>
+                                        <button class="next_btn">Siguiente Pregunta</button>
+                                    </footer>
                                 </div>
-                            </div>
 
-                            <!-- Quiz Box -->
-                            <div class="quiz_box">
-                                <header>
-                                    <div class="title">Exámen Portugués</div>
-                                    <div class="timer">
-                                        <div class="time_left_txt">Tiempo Restante</div>
-                                        <div class="timer_sec">15</div>
+                                <!-- Result Box -->
+                                <div class="result_box">
+                                    <div class="icon">
+                                        <i class=""><img
+                                                src="https://assets.website-files.com/5c6332cbd558b7db5b9817fc/60bfeb56162921608198e703_Logo-UTS-1-p-500.png"
+                                                alt="UTS.LO.HACEMOS.POSIBLE"></i>
                                     </div>
-                                    <div class="time_line"></div>
-                                </header>
-                                <section>
-                                    <div class="que_text">
-                                        <!-- Here I've inserted question from JavaScript -->
-                                    </div>
-                                    <div class="option_list">
-                                        <!-- Here I've inserted options from JavaScript -->
-                                    </div>
-                                </section>
+                                    <div class="complete_text">Has finalizado tu exámen!</div>
+                                    <div class="score_text">
+                                        <!-- Here I've inserted Score Result from JavaScript 
+                                        <script>
+                                            var str=”Mi texto”;
+                                            document.getElementById('txt').innerHTML=str;
+                                            </script>-->
 
-                                <!-- footer of Quiz Box -->
-                                <footer>
-                                    <div class="total_que">
-                                        <!-- Here I've inserted Question Count Number from JavaScript -->
                                     </div>
-                                    <button class="next_btn">Siguiente Pregunta</button>
-                                </footer>
-                            </div>
-
-                            <!-- Result Box -->
-                            <div class="result_box">
-                                <div class="icon">
-                                    <i class=""><img
-                                            src="https://assets.website-files.com/5c6332cbd558b7db5b9817fc/60bfeb56162921608198e703_Logo-UTS-1-p-500.png"
-                                            alt="UTS.LO.HACEMOS.POSIBLE"></i>
+                                    <div class="buttons">
+                                        <button class="restart">Repetir</button>
+                                        <button class="quit">Salir</button>
+                                    </div>
                                 </div>
-                                <div class="complete_text">Has finalizado tu exámen!</div>
-                                <div class="score_text">
-                                    <!-- Here I've inserted Score Result from JavaScript 
-                                    <script>
-                                        var str=”Mi texto”;
-                                        document.getElementById('txt').innerHTML=str;
-                                        </script>-->
 
-                                </div>
-                                <div class="buttons">
-                                    <button class="restart">Repetir</button>
-                                    <button class="quit">Salir</button>
-                                </div>
-                            </div>
+                            </section>
 
-                        </section>
+                            <br>
+                            <br>
+                        </div>
 
-                        <br>
-                        <br>
-                    </div>
+                    
 
+                   
                 </div>
                 <div class="card-footer text-muted">
                     {{ auth()->user()->created_at }}

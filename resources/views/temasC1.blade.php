@@ -64,17 +64,17 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link lead" href="/index" style="font-size:25px;">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link lead" href="/institucion" style="font-size:25px;">Institución</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link lead" href="/plancurso" style="font-size:25px;">Contenido</a>
                     </li>
                     <li class="nav-item">
-                        <a type="button" class="nav-link lead" href="{{ route('iniciar') }}"
+                        <a type="button" class="nav-link lead" href="{{ route('login') }}"
                             style="font-size:25px;">Prueba Diagnóstica</a>
                     </li>
 

@@ -130,7 +130,7 @@
                     <br>
                     aprenderás de manera efectiva y clara todo lo que necesitas saber sobre <b>Portugués</b><br>
                     con nuestros <b>Contenidos</b> y <b>Lecciones.</b></p>
-                <a href="{{ route('login')}}">
+                <a href="/plancurso"> <!--{{ route('login')}}-->
                     <h5 id="btnIndex2">Ver más</h5>
                 </a>
             </div>
