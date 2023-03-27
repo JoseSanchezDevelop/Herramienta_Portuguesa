@@ -118,7 +118,7 @@ restart_quiz.onclick = () => {
 
 // if quitQuiz button clicked
 quit_quiz.onclick = () => {
-    alert(resultuser);
+    //alert();
 
     window.location.reload(); //reload the current window
 };
@@ -242,6 +242,7 @@ function showResult() {
             "</p></span>";
         scoreText.innerHTML = scoreTag; //adding new span tag inside score_Text
         resultUserCicle.concat(useraprobed); // The user aprobed de course
+        resultuser.concat(resultUserCicle);
     } else {
         // if user scored less or same than 3
         let scoreTag =
@@ -255,7 +256,16 @@ function showResult() {
             "</p></span>";
         scoreText.innerHTML = scoreTag;
         resultUserCicle.concat(userreprobed); // The user Reprobed de course
+        resultuser.concat(resultUserCicle);
     }
+    // Suponiendo que el valor resultante del campo está en una variable llamada 'valor'
+    const valor = resultuser;
+
+    // Crear una solicitud AJAX para enviar el valor al servidor
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", " {{ route('guardar-campo') }} ", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify({ valor: valor }));
 }
 
 function startTimer(time) {

@@ -23,10 +23,16 @@ class User extends Authenticatable
         'ident',
         'name_user',
         'genero',
-        'email',
+        'email', 
         'career',
         'password',
     ];
+
+    public function ResultTests(){
+        //Tiene muchas... Moledo ResultTest
+        return $this->hasMany(ResultTest::class);
+    }
+
 
     public function getId()
     {

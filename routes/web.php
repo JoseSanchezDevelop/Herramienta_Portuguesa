@@ -66,6 +66,12 @@ Route::post('login', function(){
 
 });
 
+
+Route::post('/guardar-campo', [App\Http\Controllers\DataTestController::class, 'guardarCampo'])->name('guardar-campo');
+
+//Nueva ruta para una nueva publicación
+//Route::get('/post/create', [SecureurlController::class, 'create'])->name('publicaciones.create');
+
 /*
 Esto de abajo, no se debe de hacer por seguridad.
 

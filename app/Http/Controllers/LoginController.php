@@ -39,5 +39,4 @@ class LoginController extends Controller
         //si no, redireccionará la vista de nuestro user
         //return redirect()->intended()->route('accesoseguro');
     }
-
 }

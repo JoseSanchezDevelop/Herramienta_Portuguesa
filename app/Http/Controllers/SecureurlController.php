@@ -23,12 +23,21 @@ class SecureurlController extends Controller
     public function index(User $user)
     {
         //dd($user);
-        return view('dashboard');
-        //dd(auth()->user());
-        //$users = User::where('id', '!=', auth()->id())->get();
-        /*$users = User::all();
+
+        //Se traerá el arreglo con la info del usuario, para traer la URL de manera dinámica desde la db.
+        //dd($user);
         return view('dashboard', [
-            'users' => $users
-        ]);*/
+
+            'user' => $user
+
+        ]);
+        //dd(auth()->user());
+
+    }
+
+    public function create()
+    {
+        //dd('creando publicación');
+        return view('publicaciones.create');
     }
 }
