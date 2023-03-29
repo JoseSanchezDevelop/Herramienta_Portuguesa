@@ -228,8 +228,7 @@
 
                         <div class="rvdRhGyExrNYTA6euxsF xu6Xcz2CnxX04u4eQAne SQf297smyJVNzzOO3iQL LvH1cgobxEYMRPVAp8WW">
                             <img class="TR_P65x9ie7j6uxFo_Cs XO0Hd72IH1CH2AVjcbWM v2F5G_Fm6X1wxdNJdQlJ mveJTCIb2WII7J4sY22F"
-                                src="{{ asset('PhotoDefaultUser.png') }}"
-                                alt="Jese portrait">
+                                src="{{ asset('PhotoDefaultUser.png') }}" alt="Default Photo">
                             <div>
 
 
@@ -497,6 +496,7 @@
                                     </div>
                                     <div class="info">4. No puedes salir del Quiz mientras está corriendo el tiempo.</div>
                                     <div class="info">5. Obtendrás puntos con base en tus respuestas correctas.</div>
+                                    <div class="info">6. Si se acaba el tiempo, se seleccionará la respuesta correcta más no te sumará puntos.</div>
                                 </div>
                                 <div class="buttons">
                                     <button class="quit">Salir</button>
@@ -515,7 +515,7 @@
                                     <div class="time_line"></div>
                                 </header>
                                 <section>
-                                    <div class="que_text">
+                                    <div class="que_text"  id="imagen">
                                         <!-- Here I've inserted question from JavaScript -->
                                     </div>
                                     <div class="option_list">
@@ -542,10 +542,10 @@
                                 <div class="complete_text">Has finalizado tu exámen!</div>
                                 <div class="score_text">
                                     <!-- Here I've inserted Score Result from JavaScript
-                                           <script>
-                                               var str = ”Mi texto”;
-                                               document.getElementById('txt').innerHTML = str;
-                                           </script>-->
+                                                           <script>
+                                                               var str = ”Mi texto”;
+                                                               document.getElementById('txt').innerHTML = str;
+                                                           </script>-->
 
                                 </div>
                                 <div class="buttons">

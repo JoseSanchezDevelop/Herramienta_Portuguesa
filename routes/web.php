@@ -19,9 +19,7 @@ use Illuminate\Support\Facades\Auth; //Invocamos las librerias de Auth, para que
 */
 
 Route::get('/', function () {
-    return view('welcome');
-
-
+    return view('index');
 });
 
 
@@ -43,27 +41,26 @@ Route::get('/vistausuario', [SecureurlController::class, 'index'])->name('acceso
 
 //Método index, funciona para retornar vistas - Método store, para registro de datos o validar datos.
 Route::get('/login', [LoginController::class, 'index'])->name('login'); //Ruta GET solitando del login una vez ingresemos
-Route::post('/login', [LoginController::class, 'store']);//Creamos la ruta de tipo POST, para poder guardar con el método STORE la información.
+Route::post('/login', [LoginController::class, 'store']); //Creamos la ruta de tipo POST, para poder guardar con el método STORE la información.
 
 //Route::get('/iniciarsesion', [LoginController::class, 'index'])->name('iniciar'); //Se usa el helper para nombrar rutas principales
 //Route::post('/iniciarsesion', [LoginController::class, 'store']); //Request tipo POST para iniciar sesión.
- 
+
 //Ruta para terminar sesión.
 Route::get('/logout', [CerrarSesionController::class, 'store'])->name('logout');
 
-Route::post('login', function(){
+Route::post('login', function () {
     $credentials = request()->only('ident', 'password');
-    
+
     $remember = request()->filled('remember');
 
     if (Auth::attempt($credentials, $remember)) {
         request()->session()->regenerate();
-    
+
         return redirect('vistausuario');
     }
 
     return redirect('login');
-
 });
 
 
@@ -87,9 +84,6 @@ Route::get('/sesion', function () {
 
 
 
-
-Route::view('/welcome', 'welcome'); //X DEFECTO LARAVEL
-
 Route::view('/index', 'index')->name('inicio');
 
 Route::view('/institucion', 'institucion');
@@ -101,4 +95,3 @@ Route::view('/temasB2', 'temasB2');
 Route::view('/temasC1', 'temasC1');
 Route::view('/temasC2', 'temasC2');
 Route::view('/curso', 'curso');
-
