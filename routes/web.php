@@ -45,10 +45,6 @@ Route::post('/login', [LoginController::class, 'store']); //Creamos la ruta de t
 
 //Route::get('/iniciarsesion', [LoginController::class, 'index'])->name('iniciar'); //Se usa el helper para nombrar rutas principales
 //Route::post('/iniciarsesion', [LoginController::class, 'store']); //Request tipo POST para iniciar sesión.
-
-//Ruta para terminar sesión.
-Route::get('/logout', [CerrarSesionController::class, 'store'])->name('logout');
-
 Route::post('login', function () {
     $credentials = request()->only('ident', 'password');
 
@@ -62,6 +58,10 @@ Route::post('login', function () {
 
     return redirect('login');
 });
+//Ruta para terminar sesión.
+Route::get('/logout', [CerrarSesionController::class, 'store'])->name('logout');
+
+
 
 
 Route::post('/guardar-campo', [App\Http\Controllers\DataTestController::class, 'guardarCampo'])->name('guardar-campo');
@@ -95,3 +95,5 @@ Route::view('/temasB2', 'temasB2');
 Route::view('/temasC1', 'temasC1');
 Route::view('/temasC2', 'temasC2');
 Route::view('/curso', 'curso');
+
+

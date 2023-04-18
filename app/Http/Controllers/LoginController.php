@@ -17,11 +17,6 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request->get('pass'));
-        //dd es una función de laravel que permite debuggear VAR
-        //dd("Iniciando Sesión");#Me muestra todo el método post que estoy llamando
-        //dd($request->get('pass'));
-        //Validaciones de datos registrados dentro de los inputs de la vista del login
         $validated = $request->validate([
             'ident' => 'required',
             'password' => 'required'
@@ -34,9 +29,8 @@ class LoginController extends Controller
             //a la DB, mostrará la vista en la que estaba con este mensaje de alerta.
 
         }
-        //Pasamo el campo "name_user" dentro de la ruta para que contenga la autenticación de cada usuario individualmente.
+
+        //Pasamos el campo "name_user" dentro de la ruta para que contenga la autenticación de cada usuario individualmente.
         return redirect()->route('accesoseguro', ['user' => auth()->user()->name_user]);
-        //si no, redireccionará la vista de nuestro user
-        //return redirect()->intended()->route('accesoseguro');
     }
 }

@@ -22,13 +22,11 @@ class RegistroController extends Controller
     {
         return view('auth.registro');
     }
+    //¿¿dd($_REQUEST);#Me muestra todo el método post que estoy llamando
 
     public function store(Request $request)
     {
-        //dd es una función de laravel que permite debuggear VAR
-        //¿¿dd($_REQUEST);#Me muestra todo el método post que estoy llamando
-
-        //Si se digitan usuarios repetidos, no va generar error.
+        //dd || Function of Laravel for debugging var.
         $request->request->add(['name_user' => Str::slug($request->name_user)]);
 
         $validated = $request->validate([
@@ -45,12 +43,13 @@ class RegistroController extends Controller
                     ->numbers(1)
                     ->symbols(1)
                     ->uncompromised(3)
+                // uncumpromised | Ensure the password appears less than 3 times in the same data leak.
             ],
             'passconfirm' => 'required|same:password|string'
 
         ]);
 
-        // uncumpromised | Ensure the password appears less than 3 times in the same data leak...
+
 
         User::create([
 
